@@ -3,9 +3,30 @@ title: "Login"
 ---
 
 ```ts
-const sum = (num1: number, num2: number): number => {
-	return num1 + num2;
+import React, { useState } from "react";
+
+const Login: React.FC = () => {
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
+
+	const handleLogin = () => {
+		// Logic to handle login
+		console.log("Logging in with:", username, password);
+	};
+
+	return (
+		<div>
+			<input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
+			<input
+				type="password"
+				value={password}
+				onChange={(e) => setPassword(e.target.value)}
+				placeholder="Password"
+			/>
+			<button onClick={handleLogin}>Login</button>
+		</div>
+	);
 };
 
-console.log(sum(4, 8)); //12
+export default Login;
 ```
