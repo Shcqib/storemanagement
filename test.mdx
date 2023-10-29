@@ -2,31 +2,30 @@
 title: "Login"
 ---
 
-```ts
 import React, { useState } from "react";
 
 const Login: React.FC = () => {
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
+const [username, setUsername] = useState("");
+const [password, setPassword] = useState("");
 
-	const handleLogin = () => {
-		// Logic to handle login
-		console.log("Logging in with:", username, password);
-	};
+    const handleLogin = () => {
+    	// Logic to handle login
+    	console.log("Logging in with:", username, password);
+    };
 
-	return (
-		<div>
-			<input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-			<input
-				type="password"
-				value={password}
-				onChange={(e) => setPassword(e.target.value)}
-				placeholder="Password"
-			/>
-			<button onClick={handleLogin}>Login</button>
-		</div>
-	);
+    return (
+    	<div>
+    		<input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
+    		<input
+    			type="password"
+    			value={password}
+    			onChange={(e) => setPassword(e.target.value)}
+    			placeholder="Password"
+    		/>
+    		<button onClick={handleLogin}>Login</button>
+    	</div>
+    );
+
 };
 
 export default Login;
-```
